@@ -9,10 +9,10 @@ public class GameController : IService
     public void Init()
     {
         _eventBus = ServiceLocator.Current.Get<EventBus>();
-        StartGame();
+        _eventBus.Subscribe<SetLevelSignal>(StartGame, -1);
     }
 
-    public void StartGame()
+    public void StartGame(SetLevelSignal signal)
     {
         _eventBus.Invoke(new StartGameSingal());
     }

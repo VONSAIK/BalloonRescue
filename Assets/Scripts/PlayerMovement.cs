@@ -37,7 +37,6 @@ public class PlayerMovement : MonoBehaviour, IService
             _targetPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             _targetPosition.z = 0;
             _isMoving = true;
-            Debug.Log(_isMoving);
         }
     }
 
@@ -59,7 +58,6 @@ public class PlayerMovement : MonoBehaviour, IService
         if (Vector3.Distance(transform.position, _targetPosition) < 0.01f)
         {
             _isMoving = false;
-            Debug.Log(_isMoving);
         }
     }
 

@@ -34,7 +34,7 @@ public class ObjectPool<T> where T : MonoBehaviour
         return obj;
     }
 
-    public void Realease(T obj)
+    public void Release(T obj)
     {
         obj.gameObject.SetActive(false);
     }

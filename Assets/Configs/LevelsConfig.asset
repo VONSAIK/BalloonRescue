@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfbbc63621ad0ba4997c88d056673714, type: 3}
   m_Name: LevelsConfig
   m_EditorClassIdentifier: 
-  _levelData:
+  _levelsData:
   - _levelId: 1
     _levelLength: 30
-    _startSpeed: 5
-    _endSpeed: 10
+    _startSpeed: 4
+    _endSpeed: 6
     _interactableData:
     - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
-      _startCooldown: 0
-      _endCooldown: 0
-      _prewarmTime: 1
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
     - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
-      _startCooldown: 0
-      _endCooldown: 0
+      _startCooldown: 4
+      _endCooldown: 3
       _prewarmTime: 5

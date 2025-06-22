@@ -17,6 +17,7 @@ public class LevelData
     [SerializeField] private List<InteractableData> _interactableData;
 
     public int LevelId => _levelId;
+    public float LevelLength => _levelLength;
     public float StartSpeed => _startSpeed;
     public float EndSpeed => _endSpeed;
     public List<InteractableData> InteractableData => _interactableData;

@@ -4,7 +4,7 @@ using CustomEventBus.Signals;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-public class LevelController : MonoBehaviour, IService
+public class LevelController : IService
 {
     private ILevelLoader _levelLoader;
     private int _currentLevelId;
@@ -20,7 +20,7 @@ public class LevelController : MonoBehaviour, IService
         _eventBus.Subscribe<RestartLevelSignal>(RestartLevel);
 
         _levelLoader = ServiceLocator.Current.Get<ILevelLoader>();
-        _currentLevelId = 0;//PlayerPrefs.GetInt(StringConstants.CURRENT_LEVEL, 0);
+        _currentLevelId = 1;//PlayerPrefs.GetInt(StringConstants.CURRENT_LEVEL, 0);
 
         OnInit();
     }
@@ -34,6 +34,7 @@ public class LevelController : MonoBehaviour, IService
             Debug.LogErrorFormat("Can't find level with id {0}", _currentLevelId);
             return;
         }
+        Debug.Log("Виклик прив'язування рівня " + _currentLevelId);
         _eventBus.Invoke(new SetLevelSignal(_currentLevelData));
     }
 

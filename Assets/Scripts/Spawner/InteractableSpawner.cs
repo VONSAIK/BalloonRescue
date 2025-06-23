@@ -70,4 +70,10 @@ public class InteractableSpawner : MonoBehaviour, IService
         float x = Random.Range(_minX, _maxX);
         return new Vector3(x, _defaultY, 0);
     }
+
+    private void OnDestroy()
+    {
+        _eventBus.Unsubscribe<SpawnInteractableSignal>(Spawn);
+        _eventBus.Unsubscribe<DisposeInteractableSignal>(Dispose);
+    }
 }

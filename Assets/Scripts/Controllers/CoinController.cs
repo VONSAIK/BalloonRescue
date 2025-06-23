@@ -1,9 +1,8 @@
 using CustomEventBus;
 using CustomEventBus.Signals;
-using System;
 using UnityEngine;
 
-public class CoinController : IService
+public class CoinController : IService, IDisposable
 {
     private int _coin;
     public int Coin => _coin;
@@ -55,5 +54,13 @@ public class CoinController : IService
     private void LevelFinished(LevelFinishedSignal signal)
     {
         OnAddCoin(signal.LevelData.CoinForPass);
+    }
+
+    public void Dispose()
+    {
+        _eventBus.Unsubscribe<AddCoinSignal>(OnAddCoin);
+        _eventBus.Unsubscribe<SpendCoinSignal>(SpendCoin);
+        _eventBus.Unsubscribe<CoinChangedSignal>(CoinChanged);
+        _eventBus.Unsubscribe<LevelFinishedSignal>(LevelFinished);
     }
 }

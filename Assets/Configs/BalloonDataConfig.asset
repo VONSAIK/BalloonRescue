@@ -12,4 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88fdda09c0fe4ef498224fafa40613d0, type: 3}
   m_Name: BalloonDataConfig
   m_EditorClassIdentifier: 
-  _balloonsData: []
+  _balloonsData:
+  - _balloonId: 1
+    _purchasePrice: 1000
+    _balloonSprite: {fileID: 21300000, guid: 2ef8d71b01698f5468217da269a480cd, type: 3}
+  - _balloonId: 2
+    _purchasePrice: 1000
+    _balloonSprite: {fileID: 21300000, guid: 52332136dbd898e4399ecacfacddeddf, type: 3}
+  - _balloonId: 3
+    _purchasePrice: 1000
+    _balloonSprite: {fileID: 21300000, guid: 1c746c288fee7124191fe1d4fd293663, type: 3}
+  - _balloonId: 4
+    _purchasePrice: 1000
+    _balloonSprite: {fileID: 21300000, guid: 781b227f5649327418aad0416c266f9a, type: 3}
+  - _balloonId: 5
+    _purchasePrice: 1000
+    _balloonSprite: {fileID: 21300000, guid: 4a759d592afc1cb4689f62685ac25e04, type: 3}
+  - _balloonId: 6
+    _purchasePrice: 1000
+    _balloonSprite: {fileID: 21300000, guid: bb9eb32945c70f541941541dba760f0c, type: 3}
+  - _balloonId: 7
+    _purchasePrice: 1000
+    _balloonSprite: {fileID: 21300000, guid: 77ac05ff5da8ca04b882137999cce04a, type: 3}
+  - _balloonId: 8
+    _purchasePrice: 1000
+    _balloonSprite: {fileID: 21300000, guid: e8270b40620deed4d94c892bed99949d, type: 3}

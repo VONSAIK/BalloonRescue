@@ -4,7 +4,7 @@ using CustomEventBus.Signals;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-public class LevelController : IService
+public class LevelController : IService, IDisposable
 {
     private ILevelLoader _levelLoader;
     private int _currentLevelId;
@@ -20,7 +20,7 @@ public class LevelController : IService
         _eventBus.Subscribe<RestartLevelSignal>(RestartLevel);
 
         _levelLoader = ServiceLocator.Current.Get<ILevelLoader>();
-        _currentLevelId = 1; // PlayerPrefs.GetInt(StringConstants.CURRENT_LEVEL, 1);
+        _currentLevelId = 1; //Прокидаємо id з player prefs поки 1 (PlayerPrefs.GetInt(StringConstants.CURRENT_LEVEL, 1);)
 
         OnInit();
     }
@@ -60,9 +60,15 @@ public class LevelController : IService
         var player = ServiceLocator.Current.Get<Player>();
         if (player.Health > 0)
         {
-            //PlayerPrefs.SetInt(StringConstants.CURRENT_LEVEL, (_currentLevelId + 1));
+            //Встановлюємо наступний рівень, поки цього не робимо (PlayerPrefs.SetInt(StringConstants.CURRENT_LEVEL, (_currentLevelId + 1));)
             _eventBus.Invoke(new LevelFinishedSignal(_currentLevelData));
         }
     }
 
+    public void Dispose()
+    {
+        _eventBus.Unsubscribe<LevelTimePassedSignal>(LevelPassed);
+        _eventBus.Unsubscribe<NextLevelSignal>(NextLevel);
+        _eventBus.Unsubscribe<RestartLevelSignal>(RestartLevel);
+    }
 }

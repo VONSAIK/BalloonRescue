@@ -4,7 +4,7 @@ using CustomEventBus.Signals;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
-public class SignalSpawner : IService
+public class SignalSpawner : IService, CustomEventBus.IDisposable
 {
     private bool _isLevelRunning = false;
     private LevelData _levelData;
@@ -79,4 +79,10 @@ public class SignalSpawner : IService
         _isLevelRunning = false;
     }
 
+    public void Dispose()
+    {
+        _eventBus.Subscribe<SetLevelSignal>(LevelSet);
+        _eventBus.Subscribe<StartGameSingal>(GameStart);
+        _eventBus.Subscribe<StopGameSingal>(GameStop);
+    }
 }

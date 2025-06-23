@@ -41,4 +41,10 @@ public class Player : MonoBehaviour, IService
             _eventBus.Invoke(new PlayerDeadSignal());
         }
     }
+
+    private void OnDestroy()
+    {
+        _eventBus.Unsubscribe<PlayerDamagedSignal>(OnPlayerDamaged);
+        _eventBus.Unsubscribe<StartGameSingal>(GameStarted);
+    }
 }

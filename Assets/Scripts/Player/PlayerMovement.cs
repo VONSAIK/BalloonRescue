@@ -72,4 +72,9 @@ public class PlayerMovement : MonoBehaviour, IService
         _isLevelRunning = false;
     }
 
+    private void OnDestroy()
+    {
+        _eventBus.Unsubscribe<StartGameSingal>(OnStartGame);
+        _eventBus.Unsubscribe<StopGameSingal>(OnStopGame);
+    }
 }

@@ -1,9 +1,8 @@
 using CustomEventBus;
 using CustomEventBus.Signals;
-using System;
 using UnityEngine;
 
-public class ScoreController : IService
+public class ScoreController : IService, IDisposable
 {
     private EventBus _eventBus;
 
@@ -45,4 +44,10 @@ public class ScoreController : IService
         return PlayerPrefs.GetInt(StringConstants.MAX_LEVEL_SCORE + levelID, 0);
     }
 
+    public void Dispose()
+    {
+        _eventBus.Unsubscribe<StartGameSingal>(OnGameStarted);
+        _eventBus.Unsubscribe<AddScoreSignal>(OnScoreAdded);
+        _eventBus.Unsubscribe<LevelFinishedSignal>(OnLevelFinished);
+    }
 }

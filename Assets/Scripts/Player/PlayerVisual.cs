@@ -25,4 +25,9 @@ public class PlayerVisual : MonoBehaviour, IService
         var balloonData = balloonDataLoader.GetCurrentBalloonData();
         _spriteRenderer.sprite = balloonData.BalloonSprite;
     }
+
+    private void OnDestroy()
+    {
+        _eventBus.Unsubscribe<AllDataLoadedSignal>(OnDataLoaded);
+    }
 }

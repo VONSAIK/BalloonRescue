@@ -23,6 +23,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
     private ILevelLoader _levelLoader;
     private IBalloonLoader _balloonLoader;
 
+    private List<IDisposable> _disposables = new List<IDisposable>();
 
     private void Awake()
     {
@@ -33,11 +34,14 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         _gameController = new GameController();
         _levelController = new LevelController();
 
+        _configDataLoader = new ConfigDataLoader();
+
         _levelLoader = _SOLevelLoader;
         _balloonLoader = _SOBalloonLoader;
 
         RegisterServices();
         Initialize();
+        AddDisposables();
     }
 
     private void RegisterServices()
@@ -77,7 +81,24 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         var loaders = new List<ILoader>();
         loaders.Add(_levelLoader);
         loaders.Add(_balloonLoader);
-        _configDataLoader = new ConfigDataLoader();
         _configDataLoader.Init(loaders);
+    }
+
+    private void AddDisposables()
+    {
+        _disposables.Add(_configDataLoader);
+        _disposables.Add(_gameController);
+        _disposables.Add(_coinController);
+        _disposables.Add(_scoreController);
+        _disposables.Add(_levelController);
+        _disposables.Add(_signalSpawner);
+    }
+
+    private void OnDestroy()
+    {
+        foreach (var disposable in _disposables)
+        {
+            disposable.Dispose();
+        }
     }
 }

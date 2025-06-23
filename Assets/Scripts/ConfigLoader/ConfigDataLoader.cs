@@ -4,7 +4,7 @@ using CustomEventBus;
 using CustomEventBus.Signals;
 using UnityEngine;
 
-public class ConfigDataLoader : IService
+public class ConfigDataLoader : IService, IDisposable
 {
     private List<ILoader> _loaders;
     private EventBus _eventBus;
@@ -43,5 +43,10 @@ public class ConfigDataLoader : IService
         {
             loader.Load();
         }
+    }
+
+    public void Dispose()
+    {
+        _eventBus.Unsubscribe<DataLoadedSignal>(OnConfigLoaded);
     }
 }

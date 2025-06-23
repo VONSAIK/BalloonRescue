@@ -96,4 +96,14 @@ public class InteractableMover : MonoBehaviour, IService
             }
         }
     }
+
+    private void OnDestroy()
+    {
+        _eventBus.Unsubscribe<InteractableActivatedSignal>(TryAdd);
+        _eventBus.Unsubscribe<InteractableDisposedSignal>(TryRemove);
+        _eventBus.Unsubscribe<SetLevelSignal>(OnLevelSet);
+
+        _eventBus.Unsubscribe<StartGameSingal>(StartLevel);
+        _eventBus.Unsubscribe<StopGameSingal>(StopLevel);
+    }
 }

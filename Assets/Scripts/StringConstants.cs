@@ -5,6 +5,7 @@ public static class StringConstants
 
     public static readonly string COIN = "Coin";
     public static readonly string MAX_LEVEL_SCORE = "Max_level_score";
+    public static readonly string SELECTED_BALLOON = "Selected_balloon_";
 
     //Scene name
     public static readonly string GAME_SCENE = "GameScene";

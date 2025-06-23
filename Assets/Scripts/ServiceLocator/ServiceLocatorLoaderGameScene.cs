@@ -5,8 +5,10 @@ using System.Collections.Generic;
 public class ServiceLocatorLoaderGameScene : MonoBehaviour
 {
     [SerializeField] private Player _player;
+    [SerializeField] private PlayerVisual _playerVisual;
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private SOLevelLoader _SOLevelLoader;
+    [SerializeField] private SOBalloonLoader _SOBalloonLoader;
     [SerializeField] private InteractableSpawner _interactableSpawner;
     [SerializeField] private InteractableMover _interactableMover;
 
@@ -19,6 +21,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
     private SignalSpawner _signalSpawner;
 
     private ILevelLoader _levelLoader;
+    private IBalloonLoader _balloonLoader;
 
 
     private void Awake()
@@ -31,6 +34,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         _levelController = new LevelController();
 
         _levelLoader = _SOLevelLoader;
+        _balloonLoader = _SOBalloonLoader;
 
         RegisterServices();
         Initialize();
@@ -48,11 +52,13 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         ServiceLocator.Current.Register(_levelController);
 
         ServiceLocator.Current.Register<Player>(_player);
+        ServiceLocator.Current.Register<PlayerVisual>(_playerVisual);
         ServiceLocator.Current.Register<PlayerMovement>(_playerMovement);
         ServiceLocator.Current.Register<InteractableSpawner>(_interactableSpawner);
         ServiceLocator.Current.Register<InteractableMover>(_interactableMover);
 
         ServiceLocator.Current.Register<ILevelLoader>(_levelLoader);
+        ServiceLocator.Current.Register<IBalloonLoader>(_balloonLoader);
     }
 
     private void Initialize()
@@ -62,6 +68,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         _signalSpawner.Init();
         _interactableSpawner.Init();
         _player.Init();
+        _playerVisual.Init();
         _gameController.Init();
         _coinController.Init();
         _scoreController.Init();
@@ -69,6 +76,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
 
         var loaders = new List<ILoader>();
         loaders.Add(_levelLoader);
+        loaders.Add(_balloonLoader);
         _configDataLoader = new ConfigDataLoader();
         _configDataLoader.Init(loaders);
     }

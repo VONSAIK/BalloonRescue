@@ -14,11 +14,14 @@ public class LevelData
 
     [SerializeField] private float _endSpeed;
 
+    [SerializeField] private int _coinForPass;
+
     [SerializeField] private List<InteractableData> _interactableData;
 
     public int LevelId => _levelId;
     public float LevelLength => _levelLength;
     public float StartSpeed => _startSpeed;
     public float EndSpeed => _endSpeed;
+    public int CoinForPass => _coinForPass;
     public List<InteractableData> InteractableData => _interactableData;
 }

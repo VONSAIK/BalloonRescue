@@ -20,7 +20,7 @@ public class LevelController : IService
         _eventBus.Subscribe<RestartLevelSignal>(RestartLevel);
 
         _levelLoader = ServiceLocator.Current.Get<ILevelLoader>();
-        _currentLevelId = 1;//PlayerPrefs.GetInt(StringConstants.CURRENT_LEVEL, 0);
+        _currentLevelId = PlayerPrefs.GetInt(StringConstants.CURRENT_LEVEL, 1);
 
         OnInit();
     }
@@ -34,7 +34,6 @@ public class LevelController : IService
             Debug.LogErrorFormat("Can't find level with id {0}", _currentLevelId);
             return;
         }
-        Debug.Log("Виклик прив'язування рівня " + _currentLevelId);
         _eventBus.Invoke(new SetLevelSignal(_currentLevelData));
     }
 
@@ -61,7 +60,7 @@ public class LevelController : IService
         var player = ServiceLocator.Current.Get<Player>();
         if (player.Health > 0)
         {
-            PlayerPrefs.SetInt("CurrentLevel", (_currentLevelId + 1));
+            PlayerPrefs.SetInt(StringConstants.CURRENT_LEVEL, (_currentLevelId + 1));
             _eventBus.Invoke(new LevelFinishedSignal(_currentLevelData));
         }
     }

@@ -17,6 +17,7 @@ MonoBehaviour:
     _levelLength: 30
     _startSpeed: 4
     _endSpeed: 6
+    _coinForPass: 100
     _interactableData:
     - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
       _startCooldown: 2

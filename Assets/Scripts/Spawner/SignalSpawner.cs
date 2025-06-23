@@ -24,7 +24,6 @@ public class SignalSpawner : IService
     private void LevelSet(SetLevelSignal signal)
     {
         _levelData = signal.LevelData;
-        Debug.Log("Level data received");
     }
 
     private void GameStart(StartGameSingal signal)
@@ -45,13 +44,11 @@ public class SignalSpawner : IService
 
     private async UniTask SpawnInteractable(InteractableData interactableData)
     {
-        Debug.Log("StartCooldown");
         var cooldown = interactableData.StartCooldown;
 
         await UniTask.Delay(TimeSpan.FromSeconds(interactableData.PrewarmTime));
         while (_isLevelRunning)
         {
-            Debug.Log("SpawnInteractable");
             _eventBus.Invoke(new SpawnInteractableSignal(interactableData.Prefab));
 
             await UniTask.Delay(TimeSpan.FromSeconds(cooldown));

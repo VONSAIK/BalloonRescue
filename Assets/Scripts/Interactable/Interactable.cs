@@ -25,7 +25,7 @@ public abstract class Interactable : MonoBehaviour
 
     private void Dispose()
     {
-        
+        _eventBus.Invoke(new DisposeInteractableSignal(this));
     }
 
 

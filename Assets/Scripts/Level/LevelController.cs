@@ -20,7 +20,7 @@ public class LevelController : IService
         _eventBus.Subscribe<RestartLevelSignal>(RestartLevel);
 
         _levelLoader = ServiceLocator.Current.Get<ILevelLoader>();
-        _currentLevelId = PlayerPrefs.GetInt(StringConstants.CURRENT_LEVEL, 1);
+        _currentLevelId = 1; // PlayerPrefs.GetInt(StringConstants.CURRENT_LEVEL, 1);
 
         OnInit();
     }
@@ -60,7 +60,7 @@ public class LevelController : IService
         var player = ServiceLocator.Current.Get<Player>();
         if (player.Health > 0)
         {
-            PlayerPrefs.SetInt(StringConstants.CURRENT_LEVEL, (_currentLevelId + 1));
+            //PlayerPrefs.SetInt(StringConstants.CURRENT_LEVEL, (_currentLevelId + 1));
             _eventBus.Invoke(new LevelFinishedSignal(_currentLevelData));
         }
     }

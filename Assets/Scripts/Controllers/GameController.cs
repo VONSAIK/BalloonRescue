@@ -9,6 +9,7 @@ public class GameController : IService
     public void Init()
     {
         _eventBus = ServiceLocator.Current.Get<EventBus>();
+        _eventBus.Subscribe<PlayerDeadSignal>(OnPlayerDead);
         _eventBus.Subscribe<SetLevelSignal>(StartGame, -1);
     }
 
@@ -20,5 +21,12 @@ public class GameController : IService
     public void StopGame()
     {
         _eventBus.Invoke(new StopGameSingal());
+    }
+
+    private void OnPlayerDead(PlayerDeadSignal signal)
+    {
+        Debug.Log("Гру закінчено.");
+        StopGame();
+        //Показуємо вікно програшу
     }
 }

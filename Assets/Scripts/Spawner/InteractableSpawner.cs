@@ -49,7 +49,6 @@ public class InteractableSpawner : MonoBehaviour, IService
 
     private ObjectPool<Interactable> GetPool(Interactable interactable)
     {
-        Debug.Log(interactable.GetType());
         var objectTypeStr = interactable.GetType().ToString();
         ObjectPool<Interactable> pool;
 

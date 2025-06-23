@@ -1,9 +1,12 @@
+using CustomEventBus.Signals;
 using UnityEngine;
 
 public class Coin : Interactable
 {
+    [SerializeField] private int _coinValue = 1;
     protected override void Interact()
     {
-        Debug.Log("Take coin");
+        _eventBus.Invoke(new AddCoinSignal(_coinValue));
+        _eventBus.Invoke(new AddScoreSignal(_coinValue * 10));
     }
 }

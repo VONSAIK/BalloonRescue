@@ -1,6 +1,7 @@
 using UnityEngine;
 using CustomEventBus;
 using System.Collections.Generic;
+using UI;
 
 public class ServiceLocatorLoaderGameScene : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
     [SerializeField] private SOBalloonLoader _SOBalloonLoader;
     [SerializeField] private InteractableSpawner _interactableSpawner;
     [SerializeField] private InteractableMover _interactableMover;
+
+    [SerializeField] private HUD _HUD;
+    [SerializeField] private HealthBar _healthBar;
 
     private EventBus _eventBus;
     private ConfigDataLoader _configDataLoader;
@@ -77,6 +81,9 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         _coinController.Init();
         _scoreController.Init();
         _levelController.Init();
+
+        _HUD.Init();
+        _healthBar.Init();
 
         var loaders = new List<ILoader>();
         loaders.Add(_levelLoader);

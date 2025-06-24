@@ -1,5 +1,7 @@
 using CustomEventBus;
 using CustomEventBus.Signals;
+using UI;
+using UI.Windows;
 
 public class GameController : IService, IDisposable
 {
@@ -27,19 +29,19 @@ public class GameController : IService, IDisposable
     {
         StopGame();
 
-        //Показуємо вікно програшу
+        var scoreController = ServiceLocator.Current.Get<ScoreController>();
+        YouLoseWindow youWinWindow = WindowManager.ShowWindow<YouLoseWindow>();
+        youWinWindow.Init(scoreController.Score, 0);
     }
 
     private void LevelFinished(LevelFinishedSignal signal)
     {
-        var level = signal.LevelData;
-
         StopGame();
 
         var scoreController = ServiceLocator.Current.Get<ScoreController>();
+        YouWinWindow youWinWindow = WindowManager.ShowWindow<YouWinWindow>();
+        youWinWindow.Init(scoreController.Score, signal.LevelData.CoinForPass);
 
-        //Показуємо вікно перемоги
-       
     }
 
     public void Dispose()

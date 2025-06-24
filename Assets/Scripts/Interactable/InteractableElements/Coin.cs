@@ -3,10 +3,9 @@ using UnityEngine;
 
 public class Coin : Interactable
 {
-    [SerializeField] private int _coinValue = 1;
+    [SerializeField] private int _coinValue = 10;
     protected override void Interact()
     {
-        _eventBus.Invoke(new AddCoinSignal(_coinValue));
-        _eventBus.Invoke(new AddScoreSignal(_coinValue * 10));
+        _eventBus.Invoke(new AddScoreSignal(_coinValue));
     }
 }

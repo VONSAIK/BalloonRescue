@@ -12,6 +12,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
     [SerializeField] private SOBalloonLoader _SOBalloonLoader;
     [SerializeField] private InteractableSpawner _interactableSpawner;
     [SerializeField] private InteractableMover _interactableMover;
+    [SerializeField] private GUIHolder _GUIHolder;
 
     [SerializeField] private HUD _HUD;
     [SerializeField] private HealthBar _healthBar;
@@ -62,6 +63,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         ServiceLocator.Current.Register<Player>(_player);
         ServiceLocator.Current.Register<PlayerVisual>(_playerVisual);
         ServiceLocator.Current.Register<PlayerMovement>(_playerMovement);
+        ServiceLocator.Current.Register<GUIHolder>(_GUIHolder);
         ServiceLocator.Current.Register<InteractableSpawner>(_interactableSpawner);
         ServiceLocator.Current.Register<InteractableMover>(_interactableMover);
 

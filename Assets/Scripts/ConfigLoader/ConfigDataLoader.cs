@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using CustomEventBus;
 using CustomEventBus.Signals;
+using UI;
+using UI.Windows;
 using UnityEngine;
 
 public class ConfigDataLoader : IService, IDisposable
@@ -17,11 +19,7 @@ public class ConfigDataLoader : IService, IDisposable
         _eventBus = ServiceLocator.Current.Get<EventBus>();
         _eventBus.Subscribe<DataLoadedSignal>(OnConfigLoaded);
 
-        if (_loaders.Any(x => !x.IsLoadingInstant()))
-        {
-            //TODO
-            //Прокинути вікно загрузки.
-        }
+        WindowManager.ShowWindow<LoadingWindow>();
 
         LoadAll();
     }

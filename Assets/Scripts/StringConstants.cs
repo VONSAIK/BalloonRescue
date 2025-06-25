@@ -1,10 +1,13 @@
 public static class StringConstants
 {
     //Player prefs values
+    public static readonly string ACCOUNT_NAME = "Account_name";
+    public static readonly string ACCOUNT_AVATAR_PATH = "Account_avatar_path";
+
     public static readonly string CURRENT_LEVEL = "Current_level_";
 
     public static readonly string COIN = "Coin";
-    public static readonly string MAX_LEVEL_SCORE = "Max_level_score";
+    public static readonly string MAX_LEVEL_SCORE = "Max_level_score_";
     public static readonly string SELECTED_BALLOON = "Selected_balloon_";
 
     //Scene name

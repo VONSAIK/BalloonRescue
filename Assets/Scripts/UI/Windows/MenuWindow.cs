@@ -23,7 +23,8 @@ namespace UI.Windows
         }
         private void OnProfileButtonClick()
         {
-            
+            WindowManager.ShowWindow<ProfileWindow>();
+            Hide();
         }
         private void OnShopButtonClick()
         {

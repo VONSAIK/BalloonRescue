@@ -19,7 +19,10 @@ public class ConfigDataLoader : IService, IDisposable
         _eventBus = ServiceLocator.Current.Get<EventBus>();
         _eventBus.Subscribe<DataLoadedSignal>(OnConfigLoaded);
 
-        WindowManager.ShowWindow<LoadingWindow>();
+        if (_loaders.Any(x => !x.IsLoadingInstant()))
+        {
+            WindowManager.ShowWindow<LoadingWindow>();
+        }
 
         LoadAll();
     }

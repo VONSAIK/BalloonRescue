@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UI.Windows;
-
-//using UI.Windows;
 using UnityEngine;
 
 namespace UI
@@ -15,7 +13,9 @@ namespace UI
         {
             {typeof(LoadingWindow), "LoadingWindow"},
             {typeof(YouLoseWindow),"YouLoseWindow"},
-            {typeof(YouWinWindow),"YouWinWindow"}
+            {typeof(YouWinWindow),"YouWinWindow"},
+
+            {typeof(MenuWindow), "MenuWindow"}
         };
 
         public static T ShowWindow<T>() where T : Window

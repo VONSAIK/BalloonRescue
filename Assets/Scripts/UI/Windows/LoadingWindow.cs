@@ -1,5 +1,5 @@
+using Cysharp.Threading.Tasks;
 using CustomEventBus;
-using CustomEventBus.Signals;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,29 +8,34 @@ namespace UI.Windows
     public class LoadingWindow : Window
     {
         [SerializeField] private Image _progressLoading;
+        [SerializeField] private float _loadSpeed = 0.3f;
 
         private EventBus _eventBus;
 
         private void Start()
         {
             _eventBus = ServiceLocator.Current.Get<EventBus>();
-            _eventBus.Subscribe<LoadProgressChangedSignal>(LoadProgressChanged);
-            _eventBus.Subscribe<AllDataLoadedSignal>(OnAllResourcesLoaded);
+
+            StartLoading().Forget();
         }
 
-        private void LoadProgressChanged(LoadProgressChangedSignal signal)
+        private async UniTaskVoid StartLoading()
         {
-            RedrawProgress(signal.Progress);
-        }
+            float progress = 0f;
 
-        private void OnAllResourcesLoaded(AllDataLoadedSignal signal)
-        {
+            while (progress < 1f)
+            {
+                progress += Time.deltaTime * _loadSpeed;
+                _progressLoading.fillAmount = progress;
+
+                await UniTask.Yield(); 
+            }
+
+            await UniTask.Delay(500);
+
             Hide();
-        }
 
-        private void RedrawProgress(float progress)
-        {
-            _progressLoading.fillAmount = progress;
+            WindowManager.ShowWindow<MenuWindow>();
         }
     }
 }

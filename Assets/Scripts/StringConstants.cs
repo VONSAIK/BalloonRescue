@@ -4,6 +4,9 @@ public static class StringConstants
     public static readonly string ACCOUNT_NAME = "Account_name";
     public static readonly string ACCOUNT_AVATAR_PATH = "Account_avatar_path";
 
+    public static readonly string SOUND_VOLUME = "Sound_volume";
+    public static readonly string MUSIC_VOLUME = "Music_volume";
+
     public static readonly string CURRENT_LEVEL = "Current_level_";
 
     public static readonly string COIN = "Coin";

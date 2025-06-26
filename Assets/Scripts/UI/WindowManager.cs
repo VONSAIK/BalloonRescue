@@ -16,7 +16,8 @@ namespace UI
             {typeof(YouWinWindow),"YouWinWindow"},
 
             {typeof(MenuWindow), "MenuWindow"},
-            {typeof(ProfileWindow), "ProfileWindow"}
+            {typeof(ProfileWindow), "ProfileWindow"},
+            {typeof(SettingsWindow), "SettingsWindow"}
         };
 
         public static T ShowWindow<T>() where T : Window

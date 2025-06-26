@@ -11,6 +11,8 @@ public class ServiceLocatorLoaderMenuScene: MonoBehaviour
     [SerializeField] private SOLevelLoader _SOLevelLoader;
     [SerializeField] private SOBalloonLoader _SOBalloonLoader;
 
+    [SerializeField] private SoundController _soundController;
+
     private ConfigDataLoader _configDataLoader;
 
     private EventBus _eventBus;
@@ -41,6 +43,7 @@ public class ServiceLocatorLoaderMenuScene: MonoBehaviour
     {
         _coinController.Init();
         _scoreController.Init();
+        _soundController.Init();
 
         var loaders = new List<ILoader>();
         loaders.Add(_levelLoader);
@@ -58,6 +61,9 @@ public class ServiceLocatorLoaderMenuScene: MonoBehaviour
         ServiceLocator.Current.Register(_coinController);
         ServiceLocator.Current.Register(_scoreController);
         ServiceLocator.Current.Register(_eventBus);
+
+        ServiceLocator.Current.Register<SoundController>(_soundController);
+
         ServiceLocator.Current.Register<GUIHolder>(_guiHolder);
 
         ServiceLocator.Current.Register<ILevelLoader>(_levelLoader);

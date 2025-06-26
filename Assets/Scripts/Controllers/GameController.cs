@@ -18,6 +18,7 @@ public class GameController : IService, IDisposable
     public void StartGame(SetLevelSignal signal)
     {
         _eventBus.Invoke(new StartGameSingal());
+        _eventBus.Invoke(new LevelPlayMusicSignal());
     }
 
     public void StopGame()

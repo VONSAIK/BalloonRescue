@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using CustomEventBus;
 using UnityEngine;
 using UnityEngine.UI;
+using CustomEventBus.Signals;
 
 namespace UI.Windows
 {
@@ -33,6 +34,7 @@ namespace UI.Windows
 
             await UniTask.Delay(500);
 
+            _eventBus.Invoke(new MenuPlayMusicSignal());
             Hide();
 
             WindowManager.ShowWindow<MenuWindow>();

@@ -19,6 +19,7 @@ public abstract class Interactable : MonoBehaviour
         if (collision.gameObject.tag.Equals(PLAYER_TAG))
         {
             Interact();
+            PlaySound();
             Dispose();
         }
     }
@@ -28,7 +29,8 @@ public abstract class Interactable : MonoBehaviour
         _eventBus.Invoke(new DisposeInteractableSignal(this));
     }
 
-
-
-
+    private void PlaySound()
+    {
+        _eventBus.Invoke(new InteractablePlaySoundSignal(this));
+    }
 }

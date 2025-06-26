@@ -12,6 +12,8 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
     [SerializeField] private SOBalloonLoader _SOBalloonLoader;
     [SerializeField] private InteractableSpawner _interactableSpawner;
     [SerializeField] private InteractableMover _interactableMover;
+    [SerializeField] private SoundController _soundController;
+
     [SerializeField] private GUIHolder _GUIHolder;
 
     [SerializeField] private HUD _HUD;
@@ -63,9 +65,11 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         ServiceLocator.Current.Register<Player>(_player);
         ServiceLocator.Current.Register<PlayerVisual>(_playerVisual);
         ServiceLocator.Current.Register<PlayerMovement>(_playerMovement);
-        ServiceLocator.Current.Register<GUIHolder>(_GUIHolder);
         ServiceLocator.Current.Register<InteractableSpawner>(_interactableSpawner);
         ServiceLocator.Current.Register<InteractableMover>(_interactableMover);
+        ServiceLocator.Current.Register<SoundController>(_soundController);
+
+        ServiceLocator.Current.Register<GUIHolder>(_GUIHolder);
 
         ServiceLocator.Current.Register<ILevelLoader>(_levelLoader);
         ServiceLocator.Current.Register<IBalloonLoader>(_balloonLoader);
@@ -83,6 +87,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         _coinController.Init();
         _scoreController.Init();
         _levelController.Init();
+        _soundController.Init();
 
         _HUD.Init();
         _healthBar.Init();

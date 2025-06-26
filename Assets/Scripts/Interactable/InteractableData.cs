@@ -14,8 +14,11 @@ public class InteractableData
 
     [SerializeField] private float _prewarmTime;
 
+    [SerializeField] private AudioClip _interactSound;
+
     public Interactable Prefab => _interactablePrefab;
     public float StartCooldown => _startCooldown;
     public float EndCooldown => _endCooldown;
     public float PrewarmTime => _prewarmTime;
+    public AudioClip InteractSound => _interactSound;
 }

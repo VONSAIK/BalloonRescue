@@ -26,13 +26,14 @@ namespace UI.Windows
             WindowManager.ShowWindow<ProfileWindow>();
             Hide();
         }
+        private void OnSettingsButtonClick()
+        {
+            WindowManager.ShowWindow<SettingsWindow>();
+            Hide();
+        }
         private void OnShopButtonClick()
         {
 
-        }
-        private void OnSettingsButtonClick()
-        {
-            
         }
         private void OnExitButtonClick()
         {

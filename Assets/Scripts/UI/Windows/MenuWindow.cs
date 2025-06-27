@@ -47,7 +47,7 @@ namespace UI.Windows
         }
         private void OnStartButtonClick()
         {
-
+            WindowManager.ShowWindow<HowToPlayWindow>();
         }
     }
 }

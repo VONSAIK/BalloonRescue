@@ -16,6 +16,8 @@ public class LevelData
 
     [SerializeField] private int _coinForPass;
 
+    [SerializeField] private int _scoreForStar;
+
     [SerializeField] private AudioClip _levelMusic;
 
     [SerializeField] private List<InteractableData> _interactableData;
@@ -25,6 +27,7 @@ public class LevelData
     public float StartSpeed => _startSpeed;
     public float EndSpeed => _endSpeed;
     public int CoinForPass => _coinForPass;
+    public int ScoreForStar => _scoreForStar;
     public AudioClip LevelMusic => _levelMusic;
     public List<InteractableData> InteractableData => _interactableData;
 }

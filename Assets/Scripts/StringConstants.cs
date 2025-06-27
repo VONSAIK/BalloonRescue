@@ -9,9 +9,11 @@ public static class StringConstants
 
     public static readonly string CURRENT_LEVEL = "Current_level_";
 
-    public static readonly string COIN = "Coin";
     public static readonly string MAX_LEVEL_SCORE = "Max_level_score_";
 
+    public static readonly string MAX_LEVEL_STARS = "Max_level_stars";
+
+    public static readonly string COIN = "Coin";
     public static readonly string SELECTED_BALLOON = "Selected_balloon_";
     public static readonly string BALLOON_PURCHASED = "Balloon_purchased_";
 

@@ -38,7 +38,6 @@ public class ScoreController : IService, IDisposable
             PlayerPrefs.SetInt(StringConstants.MAX_LEVEL_SCORE + level.LevelId, _score);
         }
     }
-
     public int GetMaxScore(int levelID)
     {
         return PlayerPrefs.GetInt(StringConstants.MAX_LEVEL_SCORE + levelID, 0);

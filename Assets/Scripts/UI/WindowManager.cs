@@ -18,6 +18,7 @@ namespace UI
             {typeof(MenuWindow), "MenuWindow"},
             {typeof(ProfileWindow), "ProfileWindow"},
             {typeof(SettingsWindow), "SettingsWindow"},
+            {typeof(HowToPlayWindow), "HowToPlayWindow" },
 
             {typeof(ShopWindow), "ShopWindow/ShopWindow"},
             {typeof(PurchaseWindow), "ShopWindow/PurchaseWindow"}

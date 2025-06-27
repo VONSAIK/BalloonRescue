@@ -20,7 +20,7 @@ public class LevelController : IService, IDisposable
         _eventBus.Subscribe<RestartLevelSignal>(RestartLevel);
 
         _levelLoader = ServiceLocator.Current.Get<ILevelLoader>();
-        _currentLevelId = 1; //Прокидаємо id з player prefs поки 1 (PlayerPrefs.GetInt(StringConstants.CURRENT_LEVEL, 1);)
+        _currentLevelId = PlayerPrefs.GetInt(StringConstants.CURRENT_LEVEL, 1);
 
         OnInit();
     }
@@ -40,6 +40,7 @@ public class LevelController : IService, IDisposable
     private void NextLevel(NextLevelSignal signal)
     {
         _currentLevelId++;
+        PlayerPrefs.SetInt(StringConstants.CURRENT_LEVEL, (_currentLevelId));
         SelectLevel(_currentLevelId);
     }
 
@@ -60,7 +61,6 @@ public class LevelController : IService, IDisposable
         var player = ServiceLocator.Current.Get<Player>();
         if (player.Health > 0)
         {
-            //Встановлюємо наступний рівень, поки цього не робимо (PlayerPrefs.SetInt(StringConstants.CURRENT_LEVEL, (_currentLevelId + 1));)
             _eventBus.Invoke(new LevelFinishedSignal(_currentLevelData));
         }
     }

@@ -17,7 +17,8 @@ MonoBehaviour:
     _levelLength: 30
     _startSpeed: 4
     _endSpeed: 6
-    _coinForPass: 100
+    _coinForPass: 300
+    _scoreForStar: 100
     _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
     _interactableData:
     - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
@@ -28,5 +29,41 @@ MonoBehaviour:
     - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
       _startCooldown: 4
       _endCooldown: 3
-      _prewarmTime: 5
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+  - _levelId: 2
+    _levelLength: 40
+    _startSpeed: 4
+    _endSpeed: 6
+    _coinForPass: 400
+    _scoreForStar: 120
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: 089b0a34bea32724baf70db911ca05d1, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 4
+      _endCooldown: 3
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+  - _levelId: 3
+    _levelLength: 50
+    _startSpeed: 5
+    _endSpeed: 8
+    _coinForPass: 400
+    _scoreForStar: 150
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: 089b0a34bea32724baf70db911ca05d1, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
       _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}

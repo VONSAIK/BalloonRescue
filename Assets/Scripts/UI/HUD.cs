@@ -28,7 +28,7 @@ namespace UI
 
         private void RedrawLevel(SetLevelSignal signal)
         {
-            _levelText.text = "Level: " + (signal.LevelData.LevelId + 1).ToString();
+            _levelText.text = "Level: " + (signal.LevelData.LevelId).ToString();
         }
 
         private void RedrawScore(ScoreChangedSignal signal)

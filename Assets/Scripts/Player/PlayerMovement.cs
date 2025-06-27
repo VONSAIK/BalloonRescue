@@ -22,7 +22,6 @@ public class PlayerMovement : MonoBehaviour, IService
         _eventBus = ServiceLocator.Current.Get<EventBus>();
 
         mainCamera = Camera.main;
-        Debug.Log(mainCamera);
 
         _eventBus.Subscribe<StartGameSingal>(OnStartGame);
         _eventBus.Subscribe<StopGameSingal>(OnStopGame);

@@ -48,6 +48,7 @@ public class CoinController : IService, IDisposable
 
     private void CoinChanged(CoinChangedSignal signal)
     {
+        _coin = signal.Coin;
         PlayerPrefs.SetInt(StringConstants.COIN, signal.Coin);
     }
 

@@ -14,15 +14,15 @@ public class StarController : IService, IDisposable
     private int _currentScore;
     public void Init()
     {
-        _currentPlayerHealth = ServiceLocator.Current.Get<Player>().Health;
-        _currentScore = ServiceLocator.Current.Get<ScoreController>().Score;
-
         _eventBus = ServiceLocator.Current.Get<EventBus>();
-        _eventBus.Subscribe<LevelFinishedSignal>(OnLevelFinished);
+        _eventBus.Subscribe<LevelFinishedSignal>(OnLevelFinished, -1);
     }
 
     private void OnLevelFinished(LevelFinishedSignal signal)
     {
+        _currentPlayerHealth = ServiceLocator.Current.Get<Player>().Health;
+        _currentScore = ServiceLocator.Current.Get<ScoreController>().Score;
+
         var level = signal.LevelData;
 
         int stars = 0;

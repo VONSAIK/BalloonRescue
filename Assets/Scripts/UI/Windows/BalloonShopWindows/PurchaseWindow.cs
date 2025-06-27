@@ -37,7 +37,8 @@ namespace UI.Windows
             var coinController = ServiceLocator.Current.Get<CoinController>();
 
             _canBuy = coinController.HaveEnoughCoin(_price);
-
+            
+            _buyButton.enabled = _canBuy;
             _buyButton.image.sprite = _canBuy ? _defaultBuyButtonSprite : _canNotBuyButtonSprite;
         }
 

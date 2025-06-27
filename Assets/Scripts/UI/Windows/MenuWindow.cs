@@ -1,4 +1,3 @@
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -48,6 +47,7 @@ namespace UI.Windows
         private void OnStartButtonClick()
         {
             WindowManager.ShowWindow<HowToPlayWindow>();
+            Hide();
         }
     }
 }

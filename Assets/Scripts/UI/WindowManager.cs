@@ -21,7 +21,9 @@ namespace UI
             {typeof(HowToPlayWindow), "HowToPlayWindow" },
 
             {typeof(ShopWindow), "ShopWindow/ShopWindow"},
-            {typeof(PurchaseWindow), "ShopWindow/PurchaseWindow"}
+            {typeof(PurchaseWindow), "ShopWindow/PurchaseWindow"},
+
+            {typeof(SelectLevelWindow), "SelectLevelWindow/SelectLevelWindow" }
         };
 
         public static T ShowWindow<T>() where T : Window

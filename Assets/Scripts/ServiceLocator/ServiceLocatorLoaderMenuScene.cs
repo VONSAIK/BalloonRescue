@@ -18,6 +18,7 @@ public class ServiceLocatorLoaderMenuScene: MonoBehaviour
     private EventBus _eventBus;
     private CoinController _coinController;
     private ScoreController _scoreController;
+    private StarController _starController;
 
     private ILevelLoader _levelLoader;
     private IBalloonLoader _balloonDataLoader;
@@ -29,6 +30,7 @@ public class ServiceLocatorLoaderMenuScene: MonoBehaviour
         _eventBus = new EventBus();
         _coinController = new CoinController();
         _scoreController = new ScoreController();
+        _starController = new StarController();
 
         _levelLoader = _SOLevelLoader;
         _balloonDataLoader = _SOBalloonLoader;
@@ -44,6 +46,7 @@ public class ServiceLocatorLoaderMenuScene: MonoBehaviour
         _coinController.Init();
         _scoreController.Init();
         _soundController.Init();
+        _starController.Init();
 
         var loaders = new List<ILoader>();
         loaders.Add(_levelLoader);
@@ -58,9 +61,10 @@ public class ServiceLocatorLoaderMenuScene: MonoBehaviour
     {
         ServiceLocator.Init();
 
+        ServiceLocator.Current.Register(_eventBus);
         ServiceLocator.Current.Register(_coinController);
         ServiceLocator.Current.Register(_scoreController);
-        ServiceLocator.Current.Register(_eventBus);
+        ServiceLocator.Current.Register(_starController);
 
         ServiceLocator.Current.Register<SoundController>(_soundController);
 
@@ -74,6 +78,7 @@ public class ServiceLocatorLoaderMenuScene: MonoBehaviour
     {
         _disposables.Add(_coinController);
         _disposables.Add(_scoreController);
+        _disposables.Add(_starController);
     }
 
     private void OnDestroy()

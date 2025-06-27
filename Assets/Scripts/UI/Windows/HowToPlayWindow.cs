@@ -17,6 +17,7 @@ namespace UI.Windows
 
         private void OnGoLevelsButtonClick()
         {
+            WindowManager.ShowWindow<SelectLevelWindow>();
             Hide();
         }
 

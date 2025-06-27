@@ -25,6 +25,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
     private CoinController _coinController;
     private ScoreController _scoreController;
     private LevelController _levelController;
+    private StarController _starController;
     private SignalSpawner _signalSpawner;
 
     private ILevelLoader _levelLoader;
@@ -40,6 +41,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         _scoreController = new ScoreController();
         _gameController = new GameController();
         _levelController = new LevelController();
+        _starController = new StarController();
 
         _configDataLoader = new ConfigDataLoader();
 
@@ -61,6 +63,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         ServiceLocator.Current.Register(_coinController);
         ServiceLocator.Current.Register( _scoreController);
         ServiceLocator.Current.Register(_levelController);
+        ServiceLocator.Current.Register(_starController);
 
         ServiceLocator.Current.Register<Player>(_player);
         ServiceLocator.Current.Register<PlayerVisual>(_playerVisual);
@@ -87,6 +90,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         _coinController.Init();
         _scoreController.Init();
         _levelController.Init();
+        _starController.Init();
         _soundController.Init();
 
         _HUD.Init();
@@ -105,6 +109,7 @@ public class ServiceLocatorLoaderGameScene : MonoBehaviour
         _disposables.Add(_coinController);
         _disposables.Add(_scoreController);
         _disposables.Add(_levelController);
+        _disposables.Add(_starController);
         _disposables.Add(_signalSpawner);
     }
 

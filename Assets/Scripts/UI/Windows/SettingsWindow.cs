@@ -67,7 +67,7 @@ namespace UI.Windows
             PlayerPrefs.DeleteAll();
             PlayerPrefs.SetInt(StringConstants.BALLOON_PURCHASED + "1", 1);
             PlayerPrefs.SetInt(StringConstants.SELECTED_BALLOON, 1);
-            PlayerPrefs.SetInt(StringConstants.COIN, 1000);
+            _eventBus.Invoke(new CoinChangedSignal(1000));
             PlayerPrefs.Save();
         }
 

@@ -33,11 +33,17 @@ namespace UI.Windows
         }
         private void OnShopButtonClick()
         {
-
+            WindowManager.ShowWindow<ShopWindow>();
+            Hide();
         }
         private void OnExitButtonClick()
         {
 
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
         }
         private void OnStartButtonClick()
         {

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using CustomEventBus;
 using CustomEventBus.Signals;
+using UnityEditor.Presets;
 
 namespace UI.Windows
 {
@@ -9,6 +10,8 @@ namespace UI.Windows
     {
         [SerializeField] private Button _goMenuButton;
         [SerializeField] private Button _saveButton;
+
+        [SerializeField] private Button _resetProgress;
 
         [SerializeField] private Image _soundFillImage;
         [SerializeField] private Button _soundPlusButton;
@@ -39,6 +42,8 @@ namespace UI.Windows
             _musicPlusButton.onClick.AddListener(() => ChangeVolume(ref _musicVolume, Step));
             _musicMinusButton.onClick.AddListener(() => ChangeVolume(ref _musicVolume, -Step));
 
+            _resetProgress.onClick.AddListener(OnResetProgressButtonClick);
+
             _goMenuButton.onClick.AddListener(OnGoMenuButtonClick);
             _saveButton.onClick.AddListener(OnSaveSettingsButtonClick);
 
@@ -55,6 +60,15 @@ namespace UI.Windows
         {
             _soundFillImage.fillAmount = _soundVolume;
             _musicFillImage.fillAmount = _musicVolume;
+        }
+
+        private void OnResetProgressButtonClick()
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.SetInt(StringConstants.BALLOON_PURCHASED + "1", 1);
+            PlayerPrefs.SetInt(StringConstants.SELECTED_BALLOON, 1);
+            PlayerPrefs.SetInt(StringConstants.COIN, 1000);
+            PlayerPrefs.Save();
         }
 
         private void OnSaveSettingsButtonClick()

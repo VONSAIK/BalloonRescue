@@ -11,7 +11,7 @@ public class CoinController : IService, IDisposable
 
     public void Init()
     {
-        _coin = PlayerPrefs.GetInt(StringConstants.COIN, 0);
+        _coin = PlayerPrefs.GetInt(StringConstants.COIN, 1000);
 
         _eventBus = ServiceLocator.Current.Get<EventBus>();
 
@@ -32,14 +32,14 @@ public class CoinController : IService, IDisposable
         _eventBus.Invoke(new CoinChangedSignal(_coin));
     }
 
-    public bool HaveEnoughGold(int coin)
+    public bool HaveEnoughCoin(int coin)
     {
         return _coin >= coin;
     }
 
     private void SpendCoin(SpendCoinSignal signal)
     {
-        if (HaveEnoughGold(signal.Value))
+        if (HaveEnoughCoin(signal.Value))
         {
             _coin -= signal.Value;
             _eventBus.Invoke(new CoinChangedSignal(_coin));

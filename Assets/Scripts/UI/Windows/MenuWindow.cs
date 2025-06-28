@@ -54,6 +54,7 @@ namespace UI.Windows
             }
             else
             {
+                PlayerPrefs.SetInt(StringConstants.HOW_TO_PLAY_READED, 1);
                 WindowManager.ShowWindow<SelectLevelWindow>();
                 Hide();
             }

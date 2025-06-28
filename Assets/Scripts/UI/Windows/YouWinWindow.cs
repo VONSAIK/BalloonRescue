@@ -11,6 +11,7 @@ namespace UI.Windows
     {
         [SerializeField] private Button _nextLevelButton;
         [SerializeField] private Button _goToMenuButton;
+        [SerializeField] private Button _leaderboardButton;
         [SerializeField] private TextMeshProUGUI _currentScoreText;
         [SerializeField] private TextMeshProUGUI _rewardText;
 
@@ -20,6 +21,7 @@ namespace UI.Windows
         {
             _nextLevelButton.onClick.AddListener(NextLevel);
             _goToMenuButton.onClick.AddListener(GoToMenu);
+            _leaderboardButton.onClick.AddListener(Leaderboard);
 
             _eventBus = ServiceLocator.Current.Get<EventBus>();
         }
@@ -40,6 +42,19 @@ namespace UI.Windows
         {
             SceneManager.LoadScene(StringConstants.MENU_SCENE);
             Hide();
+        }
+
+        private void Leaderboard()
+        {
+            WindowManager.ShowWindow<LeaderboardWindow>();
+            Hide();
+        }
+
+        private void OnDestroy()
+        {
+            _nextLevelButton.onClick.RemoveAllListeners();
+            _goToMenuButton.onClick.RemoveAllListeners();
+            _leaderboardButton.onClick.RemoveAllListeners();
         }
     }
 }

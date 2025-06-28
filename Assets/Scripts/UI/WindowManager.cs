@@ -14,6 +14,7 @@ namespace UI
             {typeof(LoadingWindow), "LoadingWindow"},
             {typeof(YouLoseWindow),"YouLoseWindow"},
             {typeof(YouWinWindow),"YouWinWindow"},
+            {typeof(LeaderboardWindow), "LeaderboardWindow/LeaderboardWindow"},
 
             {typeof(MenuWindow), "MenuWindow"},
             {typeof(ProfileWindow), "ProfileWindow"},
@@ -24,6 +25,7 @@ namespace UI
             {typeof(PurchaseWindow), "ShopWindow/PurchaseWindow"},
 
             {typeof(SelectLevelWindow), "SelectLevelWindow/SelectLevelWindow" }
+
         };
 
         public static T ShowWindow<T>() where T : Window

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using CustomEventBus;
 using CustomEventBus.Signals;
@@ -60,5 +58,6 @@ public class Player : MonoBehaviour, IService
     {
         _eventBus.Unsubscribe<PlayerDamagedSignal>(OnPlayerDamaged);
         _eventBus.Unsubscribe<StartGameSingal>(GameStarted);
+        _eventBus.Unsubscribe<AddHealthSignal>(OnAddHealth);
     }
 }

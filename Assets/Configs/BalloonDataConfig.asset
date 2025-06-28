@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _balloonsData:
   - _balloonId: 1
-    _purchasePrice: 1000
+    _purchasePrice: 0
     _balloonSprite: {fileID: 21300000, guid: 2ef8d71b01698f5468217da269a480cd, type: 3}
   - _balloonId: 2
     _purchasePrice: 1000

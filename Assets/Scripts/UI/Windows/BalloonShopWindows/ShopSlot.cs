@@ -43,7 +43,7 @@ namespace UI.Windows
 
         private void Redraw()
         {
-            int selectedBalloonId = PlayerPrefs.GetInt(StringConstants.SELECTED_BALLOON, 0);
+            int selectedBalloonId = PlayerPrefs.GetInt(StringConstants.SELECTED_BALLOON, 1);
 
             if (!_isPurchased)
             {

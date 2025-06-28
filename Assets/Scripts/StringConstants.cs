@@ -17,6 +17,8 @@ public static class StringConstants
     public static readonly string SELECTED_BALLOON = "Selected_balloon_";
     public static readonly string BALLOON_PURCHASED = "Balloon_purchased_";
 
+    public static readonly string HOW_TO_PLAY_READED = "How_to_play_readed";
+
     //Scene name
     public static readonly string GAME_SCENE = "GameScene";
     public static readonly string MENU_SCENE = "MenuScene";

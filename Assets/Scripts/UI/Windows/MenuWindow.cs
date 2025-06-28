@@ -46,8 +46,17 @@ namespace UI.Windows
         }
         private void OnStartButtonClick()
         {
-            WindowManager.ShowWindow<HowToPlayWindow>();
-            Hide();
+            var howToPlayReaded = PlayerPrefs.GetInt(StringConstants.HOW_TO_PLAY_READED, 0);
+            if (howToPlayReaded == 0)
+            {
+                WindowManager.ShowWindow<HowToPlayWindow>();
+                Hide();
+            }
+            else
+            {
+                WindowManager.ShowWindow<SelectLevelWindow>();
+                Hide();
+            }
         }
     }
 }

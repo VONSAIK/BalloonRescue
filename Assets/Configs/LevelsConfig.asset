@@ -14,46 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelsData:
   - _levelId: 1
-    _levelLength: 30
-    _startSpeed: 4
-    _endSpeed: 6
-    _coinForPass: 300
-    _scoreForStar: 100
-    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
-    _interactableData:
-    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
-      _startCooldown: 2
-      _endCooldown: 1
-      _prewarmTime: 2
-      _interactSound: {fileID: 8300000, guid: 089b0a34bea32724baf70db911ca05d1, type: 3}
-    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
-      _startCooldown: 4
-      _endCooldown: 3
-      _prewarmTime: 4
-      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
-  - _levelId: 2
     _levelLength: 40
     _startSpeed: 4
     _endSpeed: 6
-    _coinForPass: 400
-    _scoreForStar: 120
-    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
-    _interactableData:
-    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
-      _startCooldown: 2
-      _endCooldown: 1
-      _prewarmTime: 2
-      _interactSound: {fileID: 8300000, guid: 089b0a34bea32724baf70db911ca05d1, type: 3}
-    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
-      _startCooldown: 4
-      _endCooldown: 3
-      _prewarmTime: 4
-      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
-  - _levelId: 3
-    _levelLength: 50
-    _startSpeed: 5
-    _endSpeed: 8
-    _coinForPass: 400
+    _coinForPass: 300
     _scoreForStar: 150
     _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
     _interactableData:
@@ -61,9 +25,411 @@ MonoBehaviour:
       _startCooldown: 2
       _endCooldown: 1
       _prewarmTime: 2
-      _interactSound: {fileID: 8300000, guid: 089b0a34bea32724baf70db911ca05d1, type: 3}
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 4
+      _endCooldown: 3
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 2
+    _levelLength: 50
+    _startSpeed: 4
+    _endSpeed: 6
+    _coinForPass: 400
+    _scoreForStar: 200
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 4
+      _endCooldown: 3
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 3
+    _levelLength: 60
+    _startSpeed: 4
+    _endSpeed: 6
+    _coinForPass: 600
+    _scoreForStar: 300
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
     - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
       _startCooldown: 3
       _endCooldown: 2
       _prewarmTime: 4
       _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 4
+    _levelLength: 70
+    _startSpeed: 5
+    _endSpeed: 8
+    _coinForPass: 700
+    _scoreForStar: 350
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 5
+    _levelLength: 80
+    _startSpeed: 5
+    _endSpeed: 8
+    _coinForPass: 800
+    _scoreForStar: 400
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 6
+    _levelLength: 90
+    _startSpeed: 5
+    _endSpeed: 8
+    _coinForPass: 900
+    _scoreForStar: 450
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 7
+    _levelLength: 100
+    _startSpeed: 6
+    _endSpeed: 9
+    _coinForPass: 1000
+    _scoreForStar: 450
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 8
+    _levelLength: 110
+    _startSpeed: 6
+    _endSpeed: 9
+    _coinForPass: 1100
+    _scoreForStar: 500
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 9
+    _levelLength: 120
+    _startSpeed: 6
+    _endSpeed: 9
+    _coinForPass: 1200
+    _scoreForStar: 550
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 10
+    _levelLength: 130
+    _startSpeed: 7
+    _endSpeed: 10
+    _coinForPass: 1300
+    _scoreForStar: 600
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 11
+    _levelLength: 140
+    _startSpeed: 7
+    _endSpeed: 10
+    _coinForPass: 1400
+    _scoreForStar: 650
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 12
+    _levelLength: 150
+    _startSpeed: 7
+    _endSpeed: 10
+    _coinForPass: 1500
+    _scoreForStar: 700
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 13
+    _levelLength: 160
+    _startSpeed: 8
+    _endSpeed: 11
+    _coinForPass: 1600
+    _scoreForStar: 750
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 14
+    _levelLength: 170
+    _startSpeed: 8
+    _endSpeed: 11
+    _coinForPass: 1700
+    _scoreForStar: 800
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}
+  - _levelId: 15
+    _levelLength: 180
+    _startSpeed: 8
+    _endSpeed: 11
+    _coinForPass: 2000
+    _scoreForStar: 8500
+    _levelMusic: {fileID: 8300000, guid: a5acb80bc9141e443b487af267b1b244, type: 3}
+    _interactableData:
+    - _interactablePrefab: {fileID: 4548209221405041948, guid: be0768d1d37b3d84d88646e49c4c9a1a, type: 3}
+      _startCooldown: 2
+      _endCooldown: 1
+      _prewarmTime: 2
+      _interactSound: {fileID: 8300000, guid: b94854b8f2051344db5756a6eeb88158, type: 3}
+    - _interactablePrefab: {fileID: 673781748851301834, guid: 3db2eec72597cbf49b1d7f50c768845f, type: 3}
+      _startCooldown: 3
+      _endCooldown: 2
+      _prewarmTime: 4
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 1385453607407380571, guid: 13775b5db706f5943ba68325e45ab5bb, type: 3}
+      _startCooldown: 8
+      _endCooldown: 7
+      _prewarmTime: 20
+      _interactSound: {fileID: 8300000, guid: 3b32cb022ca336541a730932293f389b, type: 3}
+    - _interactablePrefab: {fileID: 3959501620484079066, guid: adf95e41e14b02542a725473d32de04f, type: 3}
+      _startCooldown: 10
+      _endCooldown: 9
+      _prewarmTime: 25
+      _interactSound: {fileID: 8300000, guid: abf83a4c1bf9a2a408bb17317d8ae668, type: 3}

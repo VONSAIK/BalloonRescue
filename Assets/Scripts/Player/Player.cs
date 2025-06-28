@@ -16,6 +16,7 @@ public class Player : MonoBehaviour, IService
         _eventBus = ServiceLocator.Current.Get<EventBus>();
         _eventBus.Subscribe<PlayerDamagedSignal>(OnPlayerDamaged);
         _eventBus.Subscribe<StartGameSingal>(GameStarted);
+        _eventBus.Subscribe<AddHealthSignal>(OnAddHealth);
     }
 
     private void GameStarted(StartGameSingal signal)
@@ -40,6 +41,19 @@ public class Player : MonoBehaviour, IService
         {
             _eventBus.Invoke(new PlayerDeadSignal());
         }
+    }
+
+    private void OnAddHealth(AddHealthSignal signal)
+    {
+        _health += signal.Value;
+
+        if (_health > 3)
+        {
+            _eventBus.Invoke(new AddScoreSignal(50 * (_health - 3)));
+            _health = 3;
+        }
+
+        _eventBus.Invoke(new HealthChangedSignal(_health));
     }
 
     private void OnDestroy()
